@@ -1,4 +1,4 @@
-FROM ubuntu:17.10
+FROM ubuntu:18.04
 
 ARG IMAGE_CREATE_DATE
 ARG IMAGE_VERSION
@@ -24,7 +24,7 @@ LABEL org.opencontainers.image.title="Kubernetes cli toolset" \
       org.opencontainers.image.revision=$IMAGE_SOURCE_REVISION 
 
 # Install dependencies and create dirs
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends \        
         bash-completion \
         ca-certificates \
         curl \
