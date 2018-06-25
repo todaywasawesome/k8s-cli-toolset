@@ -24,7 +24,7 @@ LABEL org.opencontainers.image.title="Kubernetes cli toolset" \
       org.opencontainers.image.revision=$IMAGE_SOURCE_REVISION 
 
 # Install dependencies and create dirs
-RUN apt-get update && apt-get install -y --no-install-recommends \        
+RUN apt-get update && apt-get install -y --no-install-recommends --no-cache \        
         bash-completion \
         ca-certificates \
         curl \
